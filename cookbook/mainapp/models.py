@@ -48,10 +48,8 @@ class DishRecipe(models.Model):
         stored_quantity = Ingredient.objects.get(pk=ingredient_id).amount_used
 
         if actual_quantity != stored_quantity or stored_quantity == 0:
-            Ingredient.objects.filter(pk=ingredient_id).update(amount_used=actual_quantity)
-
-        print(self.ingredient)
-        print(ingredient_id)
+            Ingredient.objects.filter(pk=ingredient_id).\
+                update(amount_used=actual_quantity)
 
         super().save(*args, **kwargs)
 

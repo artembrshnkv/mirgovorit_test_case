@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13939f58-b0a0-43e6-94e0-f3a8882a4284" name="Changes" comment="" />
+    <list default="true" id="13939f58-b0a0-43e6-94e0-f3a8882a4284" name="Changes" comment="Done with db and admin panel">
+      <change afterPath="$PROJECT_DIR$/cookbook/mainapp/templates/mainapp/show_recipes_without_products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookbook/mainapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook/cookbook/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook/cookbook/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook/mainapp/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,23 +21,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2bU8jIlYrkK47pOnPO8rHi4mr4z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +53,18 @@
       <option name="presentableId" value="Default" />
       <updated>1706258430253</updated>
     </task>
+    <task id="LOCAL-00001" summary="Done with db and admin panel">
+      <created>1706300857377</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706300857377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done with db and admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done with db and admin panel" />
   </component>
 </project>
