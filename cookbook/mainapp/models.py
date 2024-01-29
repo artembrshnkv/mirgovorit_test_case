@@ -41,18 +41,6 @@ class DishRecipe(models.Model):
     )
     gram_weight = models.PositiveIntegerField(verbose_name='Вес в граммах')
 
-    def save(self, *args, **kwargs):
-        ingredient_id = Ingredient.objects.get(title=self.ingredient).pk
-
-        actual_quantity = DishRecipe.objects.filter(ingredient_id=ingredient_id).count()
-        stored_quantity = Ingredient.objects.get(pk=ingredient_id).amount_used
-
-        if actual_quantity != stored_quantity or stored_quantity == 0:
-            Ingredient.objects.filter(pk=ingredient_id).\
-                update(amount_used=actual_quantity)
-
-        super().save(*args, **kwargs)
-
     class Meta:
         verbose_name = 'Рецепт блюда'
         verbose_name_plural = 'Рецепты блюд'
