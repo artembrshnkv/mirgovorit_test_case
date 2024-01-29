@@ -45,21 +45,24 @@ def show_recipes_without_product(request):
     if request.method == 'GET':
         product_id = request.GET['product_id']
 
-        dishes_with_stated_ingredient = DishRecipe.objects. \
-            filter(ingredient_id=product_id, gram_weight__gte=10)
+        dishes_with_stated_ingredient = DishRecipe.objects.\
+            filter(ingredient_id=product_id, gram_weight__gte=10).\
+            values_list('dish_id', flat=True)
 
         matching_dishes = Dish.objects.\
             filter(~Q(pk__in=dishes_with_stated_ingredient)).\
-            values_list('pk')
+            values_list('pk', flat=True)
+
+        ingredients = DishRecipe.objects.\
+            filter(dish_id__in=matching_dishes).\
+            values('dish', 'ingredient__title').\
+            order_by('dish')
 
         recipes_for_template = []
-        for dish in matching_dishes:
-            ingredients = DishRecipe.objects.\
-                filter(dish_id=dish[0]).\
-                values_list('ingredient__title')
+        for dish in ingredients:
             recipe = {
-                'dish_id': dish[0],
-                'ingredients': [i[0] for i in ingredients]
+                'dish_id': dish['dish'],
+                'ingredients': dish['ingredient__title']
             }
             recipes_for_template.append(recipe)
 
